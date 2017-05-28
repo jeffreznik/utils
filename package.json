@@ -2,9 +2,9 @@
   "name": "@jeffreznik/utils",
   "version": "0.1.0",
   "description": "A collection of utility classes",
-  "main": "./dist/index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "build": "rm -rf lib && babel src --out-dir lib",
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
