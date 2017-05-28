@@ -11,7 +11,7 @@ function prepareConfig(config) {
     config.headers = Object.assign(config.headers || {}, { 'Authorization': 'Bearer ' + storage.getItem('token') })
   }
   if (typeof window === 'undefined') {
-    // if on server, add the scheme, host and port for application to request to itself (url is relative at this point)
+    // if on server, add the scheme, host and port for application to request to itself (config.url is relative at this point)
     config.url = (process.env.SECURE ? 'https' : 'http') + '://' + process.env.API_HOST + ':' + process.env.PORT + config.url
   }
   return config
