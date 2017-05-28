@@ -1,3 +1,4 @@
 export history from './history'
-export http form './http'
+export http from './http'
 export localStorage from './localStorage'
+export mysql from './mysql'
