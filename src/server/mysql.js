@@ -12,6 +12,8 @@ class MySql {
     }
 
     const connectionConfig = Object.assign({
+      host: 'localhost',
+      port: 3306,
       queryFormat: function(query, values) {
         if (!values) return query
         return query.replace(/\:(\w+)/g, (txt, key) => {
