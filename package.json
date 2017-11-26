@@ -20,7 +20,7 @@
     "babel-preset-stage-0": "^6.24.1"
   },
   "dependencies": {
-    "@jeffreznik/error": "^0.1.0",
+    "@jeffreznik/error": "file:../error",
     "axios": "^0.16.1",
     "history": "^4.6.1",
     "jsonfile": "^3.0.0",
