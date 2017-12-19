@@ -23,11 +23,11 @@ export default class HttpClient {
     try {
       return await axios(config)
     } catch (error) {
-      if (typeof error.data === 'undefined') {
+      if (typeof error.response === 'undefined') {
         // if no error.data the request never actually happened
         throw new GeneralError(`failed setting up http request`, error)
       } else {
-        throw new HttpError(`${error.status} ${error.statusText} at ${config.url}`, error)
+        throw new HttpError(`${error.response.status} ${error.response.data} at ${config.url}`, error)
       }
     }
   }
